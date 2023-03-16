@@ -67,7 +67,7 @@ void main() {
     'validate for valid password',
     () {
       //Arrange & Act
-      var result = Validator.validatePassword('pass');
+      var result = Validator.validatePassword('password');
 
       //ASSERT 
       expect(result, null);
