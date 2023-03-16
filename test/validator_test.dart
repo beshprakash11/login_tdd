@@ -61,4 +61,16 @@ void main() {
       expect(result, "Please enter atleast 8 charactor for password.");
     },
   );
+
+  //test validate for valid password
+  test(
+    'validate for valid password',
+    () {
+      //Arrange & Act
+      var result = Validator.validatePassword('pass');
+
+      //ASSERT 
+      expect(result, null);
+    },
+  );
 }

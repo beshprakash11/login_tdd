@@ -18,6 +18,10 @@ class Validator {
     if(password.isEmpty){
       return "Required Field";
     }
+
+    if(password.length < 8){
+      return "Please enter atleast 8 charactor for password.";
+    }
   }
   
 }
