@@ -38,7 +38,7 @@ void main() {
     },
   );
 
-  //check validate for password
+  //check validate for password isempty
   test(
     'validate for a password',
     () {
@@ -47,6 +47,18 @@ void main() {
 
       //ASSERT
       expect(result, "Required Field");
+    },
+  );
+
+  //test validate for invalid password
+  test(
+    'validate for invalid password',
+    () {
+      //Arrange & Act
+      var result = Validator.validatePassword('pass');
+
+      //ASSERT 
+      expect(result, "Please enter atleast 8 charactor for password.");
     },
   );
 }
