@@ -2,7 +2,6 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:login_tdd/validator.dart';
 
 void main() {
-
   //check email validation empty or not
   test(
     'validator for empty email id',
@@ -36,6 +35,18 @@ void main() {
 
       //ASSERT
       expect(result, null);
+    },
+  );
+
+  //check validate for password
+  test(
+    'validate for a password',
+    () {
+      //Arrange & Act
+      var result = Validator.validatePassword('');
+
+      //ASSERT
+      expect(result, "Required Field");
     },
   );
 }
