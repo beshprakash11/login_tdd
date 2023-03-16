@@ -13,4 +13,10 @@ class Validator {
       return "Please enter a valid email id";
     }
   }
+
+  static String? validatePassword(String password){
+    if(password.isEmpty){
+      return "Required Field";
+    }
+  }
 }
