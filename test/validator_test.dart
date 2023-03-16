@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:login_tdd/validator.dart';
 
@@ -16,12 +15,24 @@ void main() {
     },
   );
 
-  //email validation , entered field email is realy email or not
+  //email validation , entered field email is empty or not
   test(
     'validator for invalid email id',
     () {
       //ARRANGE & ACCT
       var result = Validator.validatEmail('');
+
+      //ASSERT
+      expect(result, "Please enter a valid email id");
+    },
+  );
+
+  //check entered email is realy email?
+  test(
+    'validator for invalid email id',
+    () {
+      //ARRANGE & ACCT
+      var result = Validator.validatEmail('besh@gmail.com');
 
       //ASSERT
       expect(result, "Please enter a valid email id");
