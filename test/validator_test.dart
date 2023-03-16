@@ -10,7 +10,7 @@ void main() {
       var result = Validator.validatEmail('');
 
       //ASSERT
-      expect(result, "require field");
+      expect(result, "Require Field");
     },
   );
 }
