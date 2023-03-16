@@ -24,7 +24,7 @@ void main() {
       var result = Validator.validatEmail('');
 
       //ASSERT
-      expect(result, "Require Field");
+      expect(result, "Please enter a valid email id");
     },
   );
 }
