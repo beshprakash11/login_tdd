@@ -20,7 +20,7 @@ void main() {
     'validator for invalid email id',
     () {
       //ARRANGE & ACCT
-      var result = Validator.validatEmail('');
+      var result = Validator.validatEmail('adfd');
 
       //ASSERT
       expect(result, "Please enter a valid email id");
@@ -29,13 +29,13 @@ void main() {
 
   //check entered email is realy email?
   test(
-    'validator for invalid email id',
+    'validator for valid email id',
     () {
       //ARRANGE & ACCT
       var result = Validator.validatEmail('besh@gmail.com');
 
       //ASSERT
-      expect(result, "Please enter a valid email id");
+      expect(result, null);
     },
   );
 }
