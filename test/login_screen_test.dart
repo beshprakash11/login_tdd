@@ -97,6 +97,17 @@ void main() {
           home: LoginScreen(),
         ),
       );
+      //ACT
+      Finder userNameTextField = find.byKey(const ValueKey('email_id'));
+      Finder passwordTextField = find.byKey(const ValueKey('password'));
+
+      //user name added
+      await tester.enterText(userNameTextField, "besh@gmail.com");
+      await tester.enterText(passwordTextField, "123456789password");
+
+      Finder errorTexts = find.text("Required Field");
+
+      
     },
   );
 }
