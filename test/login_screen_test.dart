@@ -34,4 +34,19 @@ void main() {
     //ASSERT
     expect(title, findsOneWidget);
   });
+
+  //email field test
+  testWidgets('Should have on text field from to collect user password id', (WidgetTester tester) async {
+    //ARRANGE
+   await tester.pumpWidget(
+      MaterialApp(
+        home: LoginScreen(),
+      ),
+    );
+    //ACT
+    Finder title = find.byKey(const ValueKey('password_id'));
+
+    //ASSERT
+    expect(title, findsOneWidget);
+  });
 }
