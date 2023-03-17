@@ -8,7 +8,7 @@ void main() {
   //login title test
   testWidgets('Should have a title', (WidgetTester tester) async {
     //ARRANGE
-   await tester.pumpWidget(
+    await tester.pumpWidget(
       const MaterialApp(
         home: LoginScreen(),
       ),
@@ -21,9 +21,10 @@ void main() {
   });
 
   //email field test
-  testWidgets('Should have on text field from to collect user email id', (WidgetTester tester) async {
+  testWidgets('Should have on text field from to collect user email id',
+      (WidgetTester tester) async {
     //ARRANGE
-   await tester.pumpWidget(
+    await tester.pumpWidget(
       const MaterialApp(
         home: LoginScreen(),
       ),
@@ -36,9 +37,10 @@ void main() {
   });
 
   //email field test
-  testWidgets('Should have on text field from to collect user password id', (WidgetTester tester) async {
+  testWidgets('Should have on text field from to collect user password id',
+      (WidgetTester tester) async {
     //ARRANGE
-   await tester.pumpWidget(
+    await tester.pumpWidget(
       const MaterialApp(
         home: LoginScreen(),
       ),
@@ -53,7 +55,7 @@ void main() {
   //login button
   testWidgets('Should have one login button', (WidgetTester tester) async {
     //ARRANGE
-   await tester.pumpWidget(
+    await tester.pumpWidget(
       const MaterialApp(
         home: LoginScreen(),
       ),
@@ -64,4 +66,9 @@ void main() {
     //ASSERT
     expect(loginButton, findsOneWidget);
   });
+
+  testWidgets(
+    "Should show Required fields error message if user email id & password is empty.",
+    (WidgetTester tester) async {},
+  );
 }
