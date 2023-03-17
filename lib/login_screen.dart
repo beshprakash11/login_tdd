@@ -44,10 +44,11 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: 20,
               ),
               ElevatedButton(
-                  onPressed: () {
-                    _key.currentState?.validate();
-                  },
-                  child: const Text("Login"))
+                onPressed: () {
+                  _key.currentState?.validate();
+                },
+                child: const Text("Login"),
+              ),
             ],
           ),
         ),
