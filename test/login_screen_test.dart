@@ -9,7 +9,7 @@ void main() {
   testWidgets('Should have a title', (WidgetTester tester) async {
     //ARRANGE
    await tester.pumpWidget(
-      MaterialApp(
+      const MaterialApp(
         home: LoginScreen(),
       ),
     );
@@ -24,7 +24,7 @@ void main() {
   testWidgets('Should have on text field from to collect user email id', (WidgetTester tester) async {
     //ARRANGE
    await tester.pumpWidget(
-      MaterialApp(
+      const MaterialApp(
         home: LoginScreen(),
       ),
     );
@@ -39,7 +39,7 @@ void main() {
   testWidgets('Should have on text field from to collect user password id', (WidgetTester tester) async {
     //ARRANGE
    await tester.pumpWidget(
-      MaterialApp(
+      const MaterialApp(
         home: LoginScreen(),
       ),
     );
