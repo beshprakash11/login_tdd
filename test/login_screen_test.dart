@@ -67,7 +67,7 @@ void main() {
     expect(loginButton, findsOneWidget);
   });
 
-  //form validation
+  //Should show Required Fields error message if user email id & password is empty
   testWidgets(
       "Should show Required Fields error message if user email id & password is empty",
       (WidgetTester tester) async {
@@ -85,4 +85,10 @@ void main() {
     //ASSERT
     expect(errorTexts, findsNWidgets(2));
   });
+
+  //Should submit form whenuser email id & password is valid
+  testWidgets(
+      "Should submit form whenuser email id & password is valid",
+      (WidgetTester tester) async {
+      });
 }
