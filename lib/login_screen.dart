@@ -36,6 +36,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 hintText: "Enter Email id",
               ),
             ),
+            const SizedBox(
+              height: 10,
+            ),
             TextFormField(
               controller: _passwordController,
               key: const ValueKey('password'),
