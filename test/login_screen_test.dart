@@ -107,7 +107,8 @@ void main() {
 
       Finder errorTexts = find.text("Required Field");
 
-      
+      //ASSERT
+      expect(errorTexts, findsNothing);
     },
   );
 }
