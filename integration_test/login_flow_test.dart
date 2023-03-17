@@ -7,6 +7,12 @@ void main() {
     "Login Flow Test",
     () {
       IntegrationTestWidgetsFlutterBinding.ensureInitialized();
+      testWidgets(
+        "Should show home screen when user taps on login button aftter enter valid email and password",
+        (WidgetTester tester) async{
+          
+        },
+      );
     },
   );
 }
