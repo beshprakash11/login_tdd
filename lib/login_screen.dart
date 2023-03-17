@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:login_tdd/validator.dart';
 
 class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+  const LoginScreen({Key? key}) : super(key: key);
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  _LoginScreenState createState() => _LoginScreenState();
 }
 
 class _LoginScreenState extends State<LoginScreen> {
@@ -14,59 +14,40 @@ class _LoginScreenState extends State<LoginScreen> {
   final GlobalKey<FormState> _key = GlobalKey<FormState>();
 
   @override
-  void dispose() {
-    super.dispose();
-    _emailController.dispose();
-    _passwordController.dispose();
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Login'),
-        leading: null,
+        title: const Text(
+          "Login",
+          key: ValueKey("title"),
+        ),
       ),
-      body: Form(
-        key: _key,
-        child: Padding(
-          padding: const EdgeInsets.all(28.0),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Form(
+          key: _key,
           child: Column(
             children: <Widget>[
               TextFormField(
                 controller: _emailController,
-                key: const ValueKey('email_id'),
-                decoration: const InputDecoration(
-                  hintText: "Enter Email id",
-                ),
+                key: const ValueKey("email_id"),
+                decoration: const InputDecoration(hintText: "Enter Email Id"),
                 validator: (value) => Validator.validatEmail(value ?? ""),
-              ),
-              const SizedBox(
-                height: 10,
               ),
               TextFormField(
                 controller: _passwordController,
-                key: const ValueKey('password'),
-                decoration: const InputDecoration(
-                  hintText: "Enter your password",
-                ),
+                key: const ValueKey("password"),
+                decoration: const InputDecoration(hintText: "Enter Password"),
                 validator: (value) => Validator.validatePassword(value ?? ""),
               ),
-              const SizedBox(
+              SizedBox(
                 height: 20,
               ),
               ElevatedButton(
-                onPressed: () {
-                  _key.currentState!.validate();
-                },
-                child: const SizedBox(
-                  width: double.infinity,
-                  height: 40,
-                  child: Center(
-                    child: Text('Login'),
-                  ),
-                ),
-              ),
+                  onPressed: () {
+                    _key.currentState?.validate();
+                  },
+                  child: Text("Login"))
             ],
           ),
         ),
