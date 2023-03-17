@@ -49,4 +49,19 @@ void main() {
     //ASSERT
     expect(passwordTextField, findsOneWidget);
   });
+
+  //login button
+  testWidgets('Should have one login button', (WidgetTester tester) async {
+    //ARRANGE
+   await tester.pumpWidget(
+      const MaterialApp(
+        home: LoginScreen(),
+      ),
+    );
+    //ACT
+    Finder loginButton = find.byType(ElevatedButton);
+
+    //ASSERT
+    expect(loginButton, findsOneWidget);
+  });
 }
