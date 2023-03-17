@@ -29,10 +29,10 @@ void main() {
       ),
     );
     //ACT
-    Finder title = find.byKey(const ValueKey('email_id'));
+    Finder userNameTextField = find.byKey(const ValueKey('email_id'));
 
     //ASSERT
-    expect(title, findsOneWidget);
+    expect(userNameTextField, findsOneWidget);
   });
 
   //email field test
@@ -44,7 +44,7 @@ void main() {
       ),
     );
     //ACT
-    Finder title = find.byKey(const ValueKey('password_id'));
+    Finder title = find.byKey(const ValueKey('password'));
 
     //ASSERT
     expect(title, findsOneWidget);
