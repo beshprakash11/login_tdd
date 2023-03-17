@@ -22,13 +22,17 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title:const Text('Login'),
+        title: const Text('Login'),
       ),
       body: Column(
         children: <Widget>[
-          TextField(
-
-          )
+          TextFormField(
+            controller: _emailController,
+            key: const ValueKey('email_id'),
+            decoration: const InputDecoration(
+              hintText: "Enter Email id",
+            ),
+          ),
         ],
       ),
     );
