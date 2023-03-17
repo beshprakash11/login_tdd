@@ -101,9 +101,14 @@ void main() {
       Finder userNameTextField = find.byKey(const ValueKey('email_id'));
       Finder passwordTextField = find.byKey(const ValueKey('password'));
 
-      //user name added
+      //user and password entered
       await tester.enterText(userNameTextField, "besh@gmail.com");
       await tester.enterText(passwordTextField, "123456789password");
+
+      //login btn taped
+      Finder loginButton = find.byType(ElevatedButton);
+      await tester.tap(loginButton);
+      await tester.pumpAndSettle();
 
       Finder errorTexts = find.text("Required Field");
 
