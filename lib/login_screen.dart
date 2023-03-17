@@ -33,6 +33,13 @@ class _LoginScreenState extends State<LoginScreen> {
               hintText: "Enter Email id",
             ),
           ),
+          TextFormField(
+            controller: _emailController,
+            key: const ValueKey('password'),
+            decoration: const InputDecoration(
+              hintText: "Enter your password",
+            ),
+          ),
         ],
       ),
     );
