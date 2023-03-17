@@ -83,6 +83,6 @@ void main() {
     Finder errorTexts = find.text("Required Field");
 
     //ASSERT
-    expect(errorTexts, findsNWidgets(1));
+    expect(errorTexts, findsNWidgets(2));
   });
 }
