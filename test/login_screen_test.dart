@@ -90,6 +90,13 @@ void main() {
   //Should submit form whenuser email id & password is valid
   testWidgets(
     "Should submit form whenuser email id & password is valid",
-    (WidgetTester tester) async {},
+    (WidgetTester tester) async {
+      // ARRANGE
+      await tester.pumpWidget(
+        const MaterialApp(
+          home: LoginScreen(),
+        ),
+      );
+    },
   );
 }
