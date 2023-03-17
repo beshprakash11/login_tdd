@@ -25,23 +25,26 @@ class _LoginScreenState extends State<LoginScreen> {
         title: const Text('Login'),
         leading: null,
       ),
-      body: Column(
-        children: <Widget>[
-          TextFormField(
-            controller: _emailController,
-            key: const ValueKey('email_id'),
-            decoration: const InputDecoration(
-              hintText: "Enter Email id",
+      body: Padding(
+        padding: const EdgeInsets.all(28.0),
+        child: Column(
+          children: <Widget>[
+            TextFormField(
+              controller: _emailController,
+              key: const ValueKey('email_id'),
+              decoration: const InputDecoration(
+                hintText: "Enter Email id",
+              ),
             ),
-          ),
-          TextFormField(
-            controller: _emailController,
-            key: const ValueKey('password'),
-            decoration: const InputDecoration(
-              hintText: "Enter your password",
+            TextFormField(
+              controller: _passwordController,
+              key: const ValueKey('password'),
+              decoration: const InputDecoration(
+                hintText: "Enter your password",
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
