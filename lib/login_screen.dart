@@ -46,6 +46,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 hintText: "Enter your password",
               ),
             ),
+            const SizedBox(height: 10,),
           ],
         ),
       ),
