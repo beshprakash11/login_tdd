@@ -11,7 +11,7 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
-  GlobalKey _key = GlobalKey();
+  final GlobalKey<FormState> _key = GlobalKey<FormState>();
 
   @override
   void dispose() {
@@ -56,7 +56,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: 20,
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  _key.currentState!.validate();
+                },
                 child: const SizedBox(
                   width: double.infinity,
                   height: 40,
