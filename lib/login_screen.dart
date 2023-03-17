@@ -46,7 +46,13 @@ class _LoginScreenState extends State<LoginScreen> {
                 hintText: "Enter your password",
               ),
             ),
-            const SizedBox(height: 10,),
+            const SizedBox(
+              height: 10,
+            ),
+            ElevatedButton(
+              onPressed: () {},
+              child: Text('Login'),
+            ),
           ],
         ),
       ),
