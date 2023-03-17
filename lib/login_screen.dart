@@ -40,14 +40,14 @@ class _LoginScreenState extends State<LoginScreen> {
                 decoration: const InputDecoration(hintText: "Enter Password"),
                 validator: (value) => Validator.validatePassword(value ?? ""),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               ElevatedButton(
                   onPressed: () {
                     _key.currentState?.validate();
                   },
-                  child: Text("Login"))
+                  child: const Text("Login"))
             ],
           ),
         ),
