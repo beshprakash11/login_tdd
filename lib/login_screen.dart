@@ -23,6 +23,7 @@ class _LoginScreenState extends State<LoginScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Login'),
+        leading: null,
       ),
       body: Column(
         children: <Widget>[
