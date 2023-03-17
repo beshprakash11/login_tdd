@@ -44,9 +44,9 @@ void main() {
       ),
     );
     //ACT
-    Finder title = find.byKey(const ValueKey('password'));
+    Finder passwordTextField = find.byKey(const ValueKey('password'));
 
     //ASSERT
-    expect(title, findsOneWidget);
+    expect(passwordTextField, findsOneWidget);
   });
 }
