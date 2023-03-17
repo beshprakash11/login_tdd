@@ -67,21 +67,22 @@ void main() {
     expect(loginButton, findsOneWidget);
   });
 
+  //form validation
   testWidgets(
-    "Should show Required fields error message if user email id & password is empty.",
-    (WidgetTester tester) async {
-      //ARRANGE
-      await tester.pumpWidget(
-        const MaterialApp(
-          home: LoginScreen(),
-        ),
-      );
+      "Should show Required Fields error message if user email id & password is empty",
+      (WidgetTester tester) async {
+    // ARRANGE
+    await tester.pumpWidget(const MaterialApp(
+      home: LoginScreen(),
+    ));
 
-      //ACT 
-      Finder loginButton = find.byType(ElevatedButton);
-      await tester.tap(loginButton);
-      await tester.pumpAndSettle();
+    // ACT
+    Finder loginButton = find.byType(ElevatedButton);
+    await tester.tap(loginButton);
+    await tester.pumpAndSettle();
+    Finder errorTexts = find.text("Required Field");
 
-    },
-  );
+    //ASSERT
+    expect(errorTexts, findsNWidgets(2));
+  });
 }
