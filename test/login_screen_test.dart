@@ -7,7 +7,7 @@ import 'package:login_tdd/login_screen.dart';
 void main() {
   testWidgets('Should have a title', (WidgetTester tester) async {
     //ARRANGE
-    tester.pumpWidget(
+   await tester.pumpWidget(
       MaterialApp(
         home: LoginScreen(),
       ),
