@@ -50,6 +50,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 decoration: const InputDecoration(
                   hintText: "Enter your password",
                 ),
+                validator: (value) => Validator.validatePassword(value ?? ""),
               ),
               const SizedBox(
                 height: 20,
