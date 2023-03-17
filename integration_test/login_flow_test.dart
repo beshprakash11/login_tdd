@@ -24,7 +24,7 @@ void main() {
           //login btn taped
           Finder loginButton = find.byType(ElevatedButton);
           await tester.tap(loginButton);
-          await tester.pumpAndSettle();
+          await tester.pumpAndSettle(Duration(seconds: 2));
 
           Finder errorTexts = find.text("Required Field");
 
@@ -54,7 +54,7 @@ void main() {
           //login btn taped
           Finder loginButton = find.byType(ElevatedButton);
           await tester.tap(loginButton);
-          await tester.pumpAndSettle();
+          await tester.pumpAndSettle(Duration(seconds: 2));
 
           Finder welcomText = find.byType(Text);
 
