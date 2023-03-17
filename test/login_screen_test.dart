@@ -69,6 +69,13 @@ void main() {
 
   testWidgets(
     "Should show Required fields error message if user email id & password is empty.",
-    (WidgetTester tester) async {},
+    (WidgetTester tester) async {
+      //ARRANGE
+    await tester.pumpWidget(
+      const MaterialApp(
+        home: LoginScreen(),
+      ),
+    );
+    },
   );
 }
