@@ -69,26 +69,27 @@ void main() {
 
   //Should show Required Fields error message if user email id & password is empty
   testWidgets(
-      "Should show Required Fields error message if user email id & password is empty",
-      (WidgetTester tester) async {
-    // ARRANGE
-    await tester.pumpWidget(const MaterialApp(
-      home: LoginScreen(),
-    ));
+    "Should show Required Fields error message if user email id & password is empty",
+    (WidgetTester tester) async {
+      // ARRANGE
+      await tester.pumpWidget(const MaterialApp(
+        home: LoginScreen(),
+      ));
 
-    // ACT
-    Finder loginButton = find.byType(ElevatedButton);
-    await tester.tap(loginButton);
-    await tester.pumpAndSettle();
-    Finder errorTexts = find.text("Required Field");
+      // ACT
+      Finder loginButton = find.byType(ElevatedButton);
+      await tester.tap(loginButton);
+      await tester.pumpAndSettle();
+      Finder errorTexts = find.text("Required Field");
 
-    //ASSERT
-    expect(errorTexts, findsNWidgets(2));
-  });
+      //ASSERT
+      expect(errorTexts, findsNWidgets(2));
+    },
+  );
 
   //Should submit form whenuser email id & password is valid
   testWidgets(
-      "Should submit form whenuser email id & password is valid",
-      (WidgetTester tester) async {
-      });
+    "Should submit form whenuser email id & password is valid",
+    (WidgetTester tester) async {},
+  );
 }
